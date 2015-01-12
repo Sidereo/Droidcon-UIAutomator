@@ -48,10 +48,11 @@ public class ViewDumper extends UiAutomatorTestCase {
         final File dumpFolder = new File(Environment.getDataDirectory(), "local/tmp");
         final File dumpFile = new File(dumpFolder, "uidump.xml");
 
+
         dumpFolder.mkdirs();
 
         dumpFile.delete();
-
+        System.err.println(dumpFile.getPath());
         try {
             UiDevice.getInstance().dumpWindowHierarchy("uidump.xml");
         } catch (Exception e) {

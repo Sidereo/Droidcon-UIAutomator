@@ -14,12 +14,8 @@ public class Droidcon extends UiAutomatorTestCase {
     private ViewDumper viewDumper;
 
     public void testDroidcon() throws UiObjectNotFoundException {
+
         uiDevice = UiDevice.getInstance();
-
-
-        System.err.println("=======================");
-        System.out.println(uiDevice.getProductName());
-        System.err.println("=======================");
 
         log = new Log(uiDevice);
         navigator = new Navigator(log);
