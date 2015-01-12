@@ -82,46 +82,20 @@ public class Droidcon extends UiAutomatorTestCase {
         log.createNewView(anchor);
         navigator.clickAndScanByIndexAndClass(0, "android.widget.TextView", anchor);
 
-        anchor = "activity #5 - dialog #1";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_one", anchor);
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #1", "com.sidereo.droidcon:id/three_show_dialog_one");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #2", "com.sidereo.droidcon:id/three_show_dialog_two");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #3", "com.sidereo.droidcon:id/three_show_dialog_three");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #4", "com.sidereo.droidcon:id/three_show_dialog_four");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #5", "com.sidereo.droidcon:id/three_show_dialog_five");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #6", "com.sidereo.droidcon:id/three_show_dialog_six");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #7", "com.sidereo.droidcon:id/three_show_dialog_seven");
+        clickAndScanOnDialogByIdWithAnchor("activity #5 - dialog #8", "com.sidereo.droidcon:id/three_show_dialog_height");
         uiDevice.pressBack();
+    }
 
-        anchor = "activity #5 - dialog #2";
+    private void clickAndScanOnDialogByIdWithAnchor(String anchor, String id) {
         log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_two", anchor);
-        uiDevice.pressBack();
-
-        anchor = "activity #5 - dialog #3";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_three", anchor);
-        uiDevice.pressBack();
-
-        anchor = "activity #5 - dialog #4";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_four", anchor);
-        uiDevice.pressBack();
-
-        anchor = "activity #5 - dialog #5";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_five", anchor);
-        uiDevice.pressBack();
-
-        anchor = "activity #5 - dialog #6";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_six", anchor);
-        uiDevice.pressBack();
-
-        anchor = "activity #5 - dialog #7";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_seven", anchor);
-        uiDevice.pressBack();
-
-        anchor = "activity #5 - dialog #8";
-        log.createNewView(anchor);
-        navigator.clickAndScanById("com.sidereo.droidcon:id/three_show_dialog_eight", anchor);
-        uiDevice.pressBack();
-
+        navigator.clickAndScanById(id, anchor);
         uiDevice.pressBack();
     }
 }
