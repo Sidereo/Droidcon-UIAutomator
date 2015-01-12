@@ -21,7 +21,12 @@ public class Navigator {
     }
 
 	public void takeScreenshot(String path) {
-		final File screenFile = new File("/data/local/tmp/", path + ".png");
+        File droidconFolder = new File("/data/local/tmp/droidcon/");
+        if (!droidconFolder.exists()) {
+            droidconFolder.mkdir();
+        }
+
+		final File screenFile = new File("/data/local/tmp/droidcon/", path + ".png");
 
 		try {
 			Thread.sleep(1000);

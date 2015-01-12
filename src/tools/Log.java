@@ -17,7 +17,7 @@ public class Log {
 	public void createNewView(String path) {
 		System.out.println(path.replace("-", "->"));
 		System.out.flush();
-		logs.add(path);
+		logs.add("view:" + path);
 	}
 
 	public void addToLogBuffer(ArrayList<String> viewLog) {
